@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="template" table="x_695084_wordpress_sites" version="3">
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>template</element>
+            <name>x_695084_wordpress_sites</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-10-12 17:27:23</sys_created_on>
+            <sys_id>ccfa669b2f833010c441d5ea2799b658</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>template</sys_name>
+            <sys_package display_value="Wordpress for everyone" source="x_695084_wordpress">bcf9eed72f833010c441d5ea2799b6e3</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Wordpress for everyone">bcf9eed72f833010c441d5ea2799b6e3</sys_scope>
+            <sys_update_name>sys_choice_x_695084_wordpress_sites_template</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-10-12 17:27:23</sys_updated_on>
+        </sys_choice_set>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>template</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Blog</label>
+            <language>en</language>
+            <name>x_695084_wordpress_sites</name>
+            <sequence/>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-10-12 17:27:23</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>48fa669b2f833010c441d5ea2799b674</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-10-12 17:27:23</sys_updated_on>
+            <value>blog</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>template</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Default</label>
+            <language>en</language>
+            <name>x_695084_wordpress_sites</name>
+            <sequence/>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-10-12 17:27:23</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>80fa669b2f833010c441d5ea2799b658</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-10-12 17:27:23</sys_updated_on>
+            <value>default</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>template</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Portfolio</label>
+            <language>en</language>
+            <name>x_695084_wordpress_sites</name>
+            <sequence/>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-10-12 17:27:23</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>40fa669b2f833010c441d5ea2799b677</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-10-12 17:27:23</sys_updated_on>
+            <value>portfolio</value>
+        </sys_choice>
+    </sys_choice>
+</record_update>

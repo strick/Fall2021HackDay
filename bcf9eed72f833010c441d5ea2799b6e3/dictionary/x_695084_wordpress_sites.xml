@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="sites" max_length="40" name="x_695084_wordpress_sites" type="collection">
+        <element attributes="edge_encryption_enabled=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Sitename" max_length="100" name="sitename" type="string"/>
+        <element choice="3" default="Pending creation" label="Site status" max_length="40" name="site_status" read_only="true" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Created" value="created"/>
+                <element inactive_on_update="false" label="Deleted" value="deleted"/>
+                <element inactive_on_update="false" label="Pending creation" value="pending-creation"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="default" label="Template" max_length="40" name="template" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Blog" value="blog"/>
+                <element inactive_on_update="false" label="Default" value="default"/>
+                <element inactive_on_update="false" label="Portfolio" value="portfolio"/>
+            </choice>
+        </element>
+    </element>
+</database>

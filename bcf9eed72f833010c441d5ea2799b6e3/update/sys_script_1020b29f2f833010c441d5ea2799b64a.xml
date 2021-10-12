@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
+        <action_query>false</action_query>
+        <action_update>false</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_695084_wordpress_sites</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition/>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>Create wordpress site</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
+
+	try { 
+		var r = new sn_ws.RESTMessageV2();
+		r.setHttpMethod('POST');
+		r.setEndpoint('https://wordpress-for-everyone.azurewebsites.net/create');
+		r.setRequestHeader("Accept", "application/json");
+		r.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+
+		gs.info("Site creation request submitted: " + current.sitename);
+		var body = "sitename=" + current.sitename;
+
+		r.setRequestBody(body);
+		var response = r.execute();
+		var responseBody = response.getBody();
+		var httpStatus = response.getStatusCode();
+		gs.info(responseBody);
+		current.site_status = 'created';
+		current.update();
+		gs.eventQueue('x_695084_wordpress.Create site', current);
+	}
+	catch (ex) {
+		var message = ex.message;
+		gs.info(message);
+	}
+
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-12 17:56:55</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>1020b29f2f833010c441d5ea2799b64a</sys_id>
+        <sys_mod_count>13</sys_mod_count>
+        <sys_name>Create wordpress site</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Wordpress for everyone" source="x_695084_wordpress">bcf9eed72f833010c441d5ea2799b6e3</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Wordpress for everyone">bcf9eed72f833010c441d5ea2799b6e3</sys_scope>
+        <sys_update_name>sys_script_1020b29f2f833010c441d5ea2799b64a</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-12 19:58:22</sys_updated_on>
+        <template/>
+        <when>async</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=1020b29f2f833010c441d5ea2799b64a"/>
+</record_update>
